@@ -16,15 +16,15 @@ def load_raw_csv(path: Path) -> pd.DataFrame:
 
 
 def save_cleaned_rows(df: pd.DataFrame) -> None:
-    debug_csv = OUTPUT_DIR / "cleaned_rows_debug.csv"
-    debug_parquet = OUTPUT_DIR / "cleaned_rows_debug.parquet"
+    #debug_csv = OUTPUT_DIR / "cleaned_rows_debug.csv"
+    #debug_parquet = OUTPUT_DIR / "cleaned_rows_debug.parquet"
 
     model_csv = OUTPUT_DIR / "cleaned_rows_model.csv"
     model_parquet = OUTPUT_DIR / "cleaned_rows_model.parquet"
 
     # Full debug dump
-    df.to_csv(debug_csv, index=False)
-    df.to_parquet(debug_parquet, index=False)
+    #df.to_csv(debug_csv, index=False)
+    #df.to_parquet(debug_parquet, index=False)
 
     # Model-friendly subset
     model_columns = [
@@ -49,8 +49,8 @@ def save_cleaned_rows(df: pd.DataFrame) -> None:
     model_df.to_parquet(model_parquet, index=False)
 
     print("\nSaved cleaned row datasets to:")
-    print(f" - {debug_csv}")
-    print(f" - {debug_parquet}")
+    #print(f" - {debug_csv}")
+    #print(f" - {debug_parquet}")
     print(f" - {model_csv}")
     print(f" - {model_parquet}")
 

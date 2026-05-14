@@ -77,8 +77,8 @@ def audit_label_quality(df: pd.DataFrame) -> None:
 
     print("\n===== LABEL QUALITY AUDIT =====")
     total = len(df)
-    valid = int((df["label"] != "").sum())
-    invalid = int((df["label"] == "").sum())
+    valid = int((df["label"] != "uncertain").sum())
+    invalid = int((df["label"] == "uncertain").sum())
 
     print(f"Total rows: {total}")
     print(f"Valid normalized labels: {valid}")
@@ -88,7 +88,7 @@ def audit_label_quality(df: pd.DataFrame) -> None:
     print(df["label"].replace("", "<INVALID>").value_counts(dropna=False))
 
     if "label_raw" in df.columns:
-        invalid_rows = df[df["label"] == ""]
+        invalid_rows = df[df["label"] == "uncertain"]
         if len(invalid_rows) > 0:
             print("\nTop invalid raw labels:")
             print(invalid_rows["label_raw"].value_counts().head(20))

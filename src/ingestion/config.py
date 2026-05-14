@@ -5,14 +5,10 @@ OUTPUT_DIR = Path("outputs")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 VALID_LABELS = {
-    "neutral",
-    "legitimate",
-    "slightly_suspicious",
+    "safe",
     "suspicious",
-    "highly_suspicious",
-    "potential_scam",
     "scam",
-    "scam_response",
+    "uncertain",
 }
 
 STEP_MARKER_PATTERN = r"\[Step:\s*\d+\]"

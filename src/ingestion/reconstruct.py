@@ -48,12 +48,12 @@ def reconstruct_conversations(df: pd.DataFrame) -> pd.DataFrame:
         context_joined = " | ".join(all_contexts)
 
         # --- Label aggregation ---
-        valid_labels = [x for x in group["label"].tolist() if x]
+        valid_labels = [x for x in group["label"].tolist() if x and x != "uncertain"]
         all_labels = valid_labels
         all_labels_str = " | ".join(all_labels)
 
-        num_valid_labels = int((group["label"] != "").sum()) if "label" in group.columns else 0
-        num_invalid_labels = int((group["label"] == "").sum()) if "label" in group.columns else 0
+        num_valid_labels = int((group["label"] != "uncertain").sum()) if "label" in group.columns else 0
+        num_invalid_labels = int((group["label"] == "uncertain").sum()) if "label" in group.columns else 0
 
         conversation_label_mode = (
             pd.Series(valid_labels).mode().iloc[0]

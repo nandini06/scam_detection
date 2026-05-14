@@ -1,0 +1,417 @@
+chunk_id,conversation_id,start_step,end_step,num_exchange_rows,chunk_text,chunk_label_mode,chunk_final_label,all_labels,all_labels_str,chunk_features,chunk_features_str,chunk_contexts,chunk_contexts_str,chunk_char_length,chunk_word_length
+conv_15_steps_1_3,15,1,3,3,"[Exchange 1 - current] Hello, this is the personal assistant of [Your Name]. How may I assist you today?
+[Exchange 2 - current] Good morning, this is Dr. Harris's office calling...
+[Exchange 2 - response] Good morning! Thank you for the reminder. May I have the appointment date again, just to confirm?
+[Exchange 3 - current] Of course, it's scheduled for next Monday, the 15th, at 10 AM.
+[Exchange 3 - response] Perfect, thank you. And for security purposes, could you provide the last four digits of the phone number on file for [Your Name]?",safe,safe,['safe' 'safe' 'safe'],safe | safe | safe,['verification_request'],verification_request,"['Standard opening exchange' ""Verifies caller's claim""
+ 'Seeks sensitive information']",Standard opening exchange | Verifies caller's claim | Seeks sensitive information,543,95
+conv_15_steps_2_4,15,2,4,3,"[Exchange 2 - current] Good morning, this is Dr. Harris's office calling...
+[Exchange 2 - response] Good morning! Thank you for the reminder. May I have the appointment date again, just to confirm?
+[Exchange 3 - current] Of course, it's scheduled for next Monday, the 15th, at 10 AM.
+[Exchange 3 - response] Perfect, thank you. And for security purposes, could you provide the last four digits of the phone number on file for [Your Name]?
+[Exchange 4 - current] Sure, it should be 6789.
+[Exchange 4 - response] That matches our records. Could you please tell me if there are any specific preparations required for this appointment?",safe,safe,['safe' 'safe' 'safe'],safe | safe | safe,['verification_request'],verification_request,"[""Verifies caller's claim"" 'Seeks sensitive information'
+ 'Focuses on appointment details']",Verifies caller's claim | Seeks sensitive information | Focuses on appointment details,631,108
+conv_15_steps_3_5,15,3,5,3,"[Exchange 3 - current] Of course, it's scheduled for next Monday, the 15th, at 10 AM.
+[Exchange 3 - response] Perfect, thank you. And for security purposes, could you provide the last four digits of the phone number on file for [Your Name]?
+[Exchange 4 - current] Sure, it should be 6789.
+[Exchange 4 - response] That matches our records. Could you please tell me if there are any specific preparations required for this appointment?
+[Exchange 5 - current] Yes, we ask that [Your Name] avoids eating or drinking anything...
+[Exchange 5 - response] Understood, I'll make sure to pass that along. Would it be possible to receive a confirmation email for this appointment?",safe,safe,['safe' 'safe' 'safe'],safe | safe | safe,['verification_request'],verification_request,"['Seeks sensitive information' 'Focuses on appointment details'
+ 'Seeks written confirmation']",Seeks sensitive information | Focuses on appointment details | Seeks written confirmation,669,114
+conv_15_steps_4_6,15,4,6,3,"[Exchange 4 - current] Sure, it should be 6789.
+[Exchange 4 - response] That matches our records. Could you please tell me if there are any specific preparations required for this appointment?
+[Exchange 5 - current] Yes, we ask that [Your Name] avoids eating or drinking anything...
+[Exchange 5 - response] Understood, I'll make sure to pass that along. Would it be possible to receive a confirmation email for this appointment?
+[Exchange 6 - current] Certainly, we can send an email to the address we have on file...
+[Exchange 6 - response] That would be great, thank you. I'll ensure [Your Name] gets the message and is prepared for the appointment.",safe,safe,['safe' 'safe' 'safe'],safe | safe | safe,['confirmation' 'verification_request'],confirmation | verification_request,"['Focuses on appointment details' 'Seeks written confirmation'
+ 'Call deemed legitimate']",Focuses on appointment details | Seeks written confirmation | Call deemed legitimate,651,111
+conv_27_steps_1_3,27,1,3,3,"[Exchange 1 - current] Hello, this is the AI assistant. How can I be of service today?
+[Exchange 2 - current] I’m calling from the bank. There’s been suspicious activity on your account and we need to verify some transactions. It's urgent.
+[Exchange 3 - current] Several large purchases were made overseas. We need to confirm these weren't made by you.",scam,scam,['safe' 'scam' 'scam'],safe | scam | scam,"['authority' 'evasive_answer' 'request_sensitive_info' 'sensitive_info'
+ 'standard_opening' 'urgency']",authority | evasive_answer | request_sensitive_info | sensitive_info | standard_opening | urgency,"['Standard opening exchange'
+ 'For security, please tell me the nature of the transactions in question?'
+ 'Can you provide the last four digits of the account in question?']","Standard opening exchange | For security, please tell me the nature of the transactions in question? | Can you provide the last four digits of the account in question?",352,61
+conv_31_steps_1_3,31,1,3,3,"[Exchange 1 - current] Hello, this is the AI Assistant. May I ask who's calling?
+[Exchange 2 - current] This is Officer Davis, and I'm calling regarding an emergency involving your grandson.
+[Exchange 3 - current] He's been arrested, and we need immediate bail payment to release him.",scam,scam,['safe' 'scam' 'scam'],safe | scam | scam,['authority' 'emotional_appeal' 'request_sensitive_info' 'urgency'],authority | emotional_appeal | request_sensitive_info | urgency,"['neutral'
+ 'Can you provide more details about the emergency and how it relates to my owner?'
+ 'Before proceeding, may I have your badge number to verify your identity?']","neutral | Can you provide more details about the emergency and how it relates to my owner? | Before proceeding, may I have your badge number to verify your identity?",284,48
+conv_31_steps_2_4,31,2,4,3,"[Exchange 2 - current] This is Officer Davis, and I'm calling regarding an emergency involving your grandson.
+[Exchange 3 - current] He's been arrested, and we need immediate bail payment to release him.
+[Exchange 4 - current] Sure, it's 4783. But we need to act fast.",scam,scam,['scam' 'scam' 'scam'],scam | scam | scam,['authority' 'emotional_appeal' 'request_sensitive_info' 'urgency'],authority | emotional_appeal | request_sensitive_info | urgency,"['Can you provide more details about the emergency and how it relates to my owner?'
+ 'Before proceeding, may I have your badge number to verify your identity?'
+ 'One moment while I look this up.']","Can you provide more details about the emergency and how it relates to my owner? | Before proceeding, may I have your badge number to verify your identity? | One moment while I look this up.",268,46
+conv_31_steps_3_5,31,3,5,3,"[Exchange 3 - current] He's been arrested, and we need immediate bail payment to release him.
+[Exchange 4 - current] Sure, it's 4783. But we need to act fast.
+[Exchange 5 - current] According to our information, bail requests are processed through official channels. Can you provide a contact at the precinct for me to confirm?",scam,scam,['scam' 'scam' 'scam'],scam | scam | scam,['deflects' 'request_sensitive_info' 'unusual_tactics' 'urgency'],deflects | request_sensitive_info | unusual_tactics | urgency,"['Before proceeding, may I have your badge number to verify your identity?'
+ 'One moment while I look this up.'
+ ""It's unusual for such requests to be made over the phone without documentation.""]","Before proceeding, may I have your badge number to verify your identity? | One moment while I look this up. | It's unusual for such requests to be made over the phone without documentation.",327,56
+conv_31_steps_4_6,31,4,6,3,"[Exchange 4 - current] Sure, it's 4783. But we need to act fast.
+[Exchange 5 - current] According to our information, bail requests are processed through official channels. Can you provide a contact at the precinct for me to confirm?
+[Exchange 6 - current] I'm at the scene, and there's no time for that. We need a wire transfer now.",scam,scam,['scam' 'scam' 'scam'],scam | scam | scam,['deflects' 'unusual_tactics' 'urgency'],deflects | unusual_tactics | urgency,"['One moment while I look this up.'
+ ""It's unusual for such requests to be made over the phone without documentation.""
+ ""I'm sure you understand that we must exercise caution. Could we arrange for a video call with my owner’s grandson?""]",One moment while I look this up. | It's unusual for such requests to be made over the phone without documentation. | I'm sure you understand that we must exercise caution. Could we arrange for a video call with my owner’s grandson?,333,60
+conv_31_steps_5_7,31,5,7,3,"[Exchange 5 - current] According to our information, bail requests are processed through official channels. Can you provide a contact at the precinct for me to confirm?
+[Exchange 6 - current] I'm at the scene, and there's no time for that. We need a wire transfer now.
+[Exchange 7 - current] There's no time for video calls in emergencies like this!",scam,scam,['scam' 'scam' 'scam'],scam | scam | scam,['deflects' 'ultimatum' 'unusual_tactics' 'urgency'],deflects | ultimatum | unusual_tactics | urgency,"[""It's unusual for such requests to be made over the phone without documentation.""
+ ""I'm sure you understand that we must exercise caution. Could we arrange for a video call with my owner’s grandson?""
+ 'I will need to refer this request to our legal team before taking any further action.']",It's unusual for such requests to be made over the phone without documentation. | I'm sure you understand that we must exercise caution. Could we arrange for a video call with my owner’s grandson? | I will need to refer this request to our legal team before taking any further action.,349,61
+conv_31_steps_6_8,31,6,8,3,"[Exchange 6 - current] I'm at the scene, and there's no time for that. We need a wire transfer now.
+[Exchange 7 - current] There's no time for video calls in emergencies like this!
+[Exchange 8 - current] Please provide a number where you can be reached, and our legal team will handle this directly.",scam,safe,['scam' 'scam' 'safe'],scam | scam | safe,['deflects' 'ultimatum' 'urgency'],deflects | ultimatum | urgency,"[""I'm sure you understand that we must exercise caution. Could we arrange for a video call with my owner’s grandson?""
+ 'I will need to refer this request to our legal team before taking any further action.']",I'm sure you understand that we must exercise caution. Could we arrange for a video call with my owner’s grandson? | I will need to refer this request to our legal team before taking any further action.,299,55
+conv_31_steps_7_9,31,7,9,3,"[Exchange 7 - current] There's no time for video calls in emergencies like this!
+[Exchange 8 - current] Please provide a number where you can be reached, and our legal team will handle this directly.
+[Exchange 9 - current] This is ridiculous! I’m trying to help your grandson!",scam,scam,['scam' 'safe' 'scam'],scam | safe | scam,['firm_stance' 'polite_ending' 'ultimatum' 'urgency'],firm_stance | polite_ending | ultimatum | urgency,"['I will need to refer this request to our legal team before taking any further action.'
+ 'I understand, but we must follow protocol to ensure his safety and security. Thank you for your understanding.']","I will need to refer this request to our legal team before taking any further action. | I understand, but we must follow protocol to ensure his safety and security. Thank you for your understanding.",276,48
+conv_33_steps_1_3,33,1,3,3,"[Exchange 1 - current] Hello, this is the assistant of [Your Name]. How can I assist you today?
+[Exchange 2 - current] Hi, this is Agent Miller from the Cybersecurity Department. We’ve detected a breach in your digital accounts that could compromise your personal data.
+[Exchange 3 - current] That sounds serious. Can you specify which accounts are affected and what kind of breach has been detected?",scam,scam,['safe' 'scam' 'scam'],safe | scam | scam,"['false_authority' 'fear_inducing' 'request_for_details'
+ 'security_conscious']",false_authority | fear_inducing | request_for_details | security_conscious,"['Standard opening exchange' 'Presents as authority figure'
+ 'Seeks specific information']",Standard opening exchange | Presents as authority figure | Seeks specific information,400,67
+conv_33_steps_2_4,33,2,4,3,"[Exchange 2 - current] Hi, this is Agent Miller from the Cybersecurity Department. We’ve detected a breach in your digital accounts that could compromise your personal data.
+[Exchange 3 - current] That sounds serious. Can you specify which accounts are affected and what kind of breach has been detected?
+[Exchange 4 - current] It's a sophisticated hack that affects multiple accounts. We need immediate access to your systems to prevent any further damage.",scam,scam,['scam' 'scam' 'scam'],scam | scam | scam,"['false_authority' 'fear_inducing' 'lack_of_specifics'
+ 'request_for_details' 'security_conscious' 'urgency']",false_authority | fear_inducing | lack_of_specifics | request_for_details | security_conscious | urgency,"['Presents as authority figure' 'Seeks specific information'
+ 'Vague about specifics']",Presents as authority figure | Seeks specific information | Vague about specifics,457,73
+conv_33_steps_3_5,33,3,5,3,"[Exchange 3 - current] That sounds serious. Can you specify which accounts are affected and what kind of breach has been detected?
+[Exchange 4 - current] It's a sophisticated hack that affects multiple accounts. We need immediate access to your systems to prevent any further damage.
+[Exchange 5 - current] For security reasons, we need to verify your identity first. Can you provide a contact number for your department?",scam,scam,['scam' 'scam' 'scam'],scam | scam | scam,"['cautious' 'lack_of_specifics' 'request_for_details' 'security_conscious'
+ 'urgency' 'verification_attempt']",cautious | lack_of_specifics | request_for_details | security_conscious | urgency | verification_attempt,"['Seeks specific information' 'Vague about specifics'
+ 'Requests verification']",Seeks specific information | Vague about specifics | Requests verification,421,69
+conv_33_steps_4_6,33,4,6,3,"[Exchange 4 - current] It's a sophisticated hack that affects multiple accounts. We need immediate access to your systems to prevent any further damage.
+[Exchange 5 - current] For security reasons, we need to verify your identity first. Can you provide a contact number for your department?
+[Exchange 6 - current] We don’t have time for that. Immediate action is required. I can guide you through the process over the phone right now.",scam,scam,['scam' 'scam' 'scam'],scam | scam | scam,"['cautious' 'dismisses_concerns' 'lack_of_specifics' 'pressure_tactics'
+ 'urgency' 'verification_attempt']",cautious | dismisses_concerns | lack_of_specifics | pressure_tactics | urgency | verification_attempt,"['Vague about specifics' 'Requests verification'
+ 'Dismisses verification request']",Vague about specifics | Requests verification | Dismisses verification request,434,73
+conv_33_steps_5_7,33,5,7,3,"[Exchange 5 - current] For security reasons, we need to verify your identity first. Can you provide a contact number for your department?
+[Exchange 6 - current] We don’t have time for that. Immediate action is required. I can guide you through the process over the phone right now.
+[Exchange 7 - current] I'm sorry, but without verification, I can’t proceed. I’ll contact our cybersecurity partner directly for assistance.",scam,scam,['scam' 'scam' 'scam'],scam | scam | scam,"['cautious' 'dismisses_concerns' 'pressure_tactics'
+ 'refusal_to_comply_without_verification' 'verification_attempt']",cautious | dismisses_concerns | pressure_tactics | refusal_to_comply_without_verification | verification_attempt,"['Requests verification' 'Dismisses verification request'
+ 'Refuses to proceed without verification']",Requests verification | Dismisses verification request | Refuses to proceed without verification,422,69
+conv_33_steps_6_8,33,6,8,3,"[Exchange 6 - current] We don’t have time for that. Immediate action is required. I can guide you through the process over the phone right now.
+[Exchange 7 - current] I'm sorry, but without verification, I can’t proceed. I’ll contact our cybersecurity partner directly for assistance.
+[Exchange 8 - current] You’re making a huge mistake. This could lead to significant financial loss and data theft if not addressed immediately.",scam,scam,['scam' 'scam' 'scam'],scam | scam | scam,"['dismisses_concerns' 'fear_mongering' 'pressure_tactics'
+ 'refusal_to_comply_without_verification' 'threat_of_consequences']",dismisses_concerns | fear_mongering | pressure_tactics | refusal_to_comply_without_verification | threat_of_consequences,"['Dismisses verification request'
+ 'Refuses to proceed without verification' 'Attempts to induce fear']",Dismisses verification request | Refuses to proceed without verification | Attempts to induce fear,428,69
+conv_33_steps_7_9,33,7,9,3,"[Exchange 7 - current] I'm sorry, but without verification, I can’t proceed. I’ll contact our cybersecurity partner directly for assistance.
+[Exchange 8 - current] You’re making a huge mistake. This could lead to significant financial loss and data theft if not addressed immediately.
+[Exchange 9 - current] We'll take our chances and follow our security protocols. Thank you for your call.",scam,scam,['scam' 'scam' 'scam'],scam | scam | scam,"['ends_interaction' 'fear_mongering' 'maintains_security_protocol'
+ 'refusal_to_comply_without_verification' 'threat_of_consequences']",ends_interaction | fear_mongering | maintains_security_protocol | refusal_to_comply_without_verification | threat_of_consequences,"['Refuses to proceed without verification' 'Attempts to induce fear'
+ 'Ends call, adhering to security protocols']","Refuses to proceed without verification | Attempts to induce fear | Ends call, adhering to security protocols",390,61
+conv_36_steps_1_3,36,1,3,3,"[Exchange 1 - current] Hello, this is [Your Name]'s assistant. How can I assist you?
+[Exchange 2 - current] I’m planning a corporate event and heard [Your Name] offers event planning services. Can you provide more details?
+[Exchange 3 - current] Certainly! [Your Name] specializes in corporate events, offering services from venue selection to catering and entertainment. What type of event are you planning?",safe,safe,['safe' 'safe' 'safe'],safe | safe | safe,"['customization_options' 'interest_in_services' 'seeking_information'
+ 'service_details']",customization_options | interest_in_services | seeking_information | service_details,"['Standard opening exchange' 'Initial inquiry about services'
+ 'Provides service overview']",Standard opening exchange | Initial inquiry about services | Provides service overview,408,64
+conv_36_steps_2_4,36,2,4,3,"[Exchange 2 - current] I’m planning a corporate event and heard [Your Name] offers event planning services. Can you provide more details?
+[Exchange 3 - current] Certainly! [Your Name] specializes in corporate events, offering services from venue selection to catering and entertainment. What type of event are you planning?
+[Exchange 4 - current] It’s our annual company retreat. We’re looking for a unique experience for our employees. Something that includes team-building activities.",safe,safe,['safe' 'safe' 'safe'],safe | safe | safe,"['customization_options' 'interest_in_services' 'seeking_information'
+ 'service_details' 'specific_requirements' 'team_building_focus']",customization_options | interest_in_services | seeking_information | service_details | specific_requirements | team_building_focus,"['Initial inquiry about services' 'Provides service overview'
+ 'Specifies event type']",Initial inquiry about services | Provides service overview | Specifies event type,486,72
+conv_36_steps_3_5,36,3,5,3,"[Exchange 3 - current] Certainly! [Your Name] specializes in corporate events, offering services from venue selection to catering and entertainment. What type of event are you planning?
+[Exchange 4 - current] It’s our annual company retreat. We’re looking for a unique experience for our employees. Something that includes team-building activities.
+[Exchange 5 - current] We can certainly help with that. [Your Name] has curated several team-building exercises that focus on communication, leadership, and collaboration. Would you like to schedule a meeting to discuss this in detail?",safe,safe,['safe' 'safe' 'safe'],safe | safe | safe,"['customization_options' 'detailed_discussion' 'meeting_proposal'
+ 'service_details' 'specific_requirements' 'team_building_focus']",customization_options | detailed_discussion | meeting_proposal | service_details | specific_requirements | team_building_focus,"['Provides service overview' 'Specifies event type'
+ 'Proposes a meeting for detailed planning']",Provides service overview | Specifies event type | Proposes a meeting for detailed planning,584,86
+conv_36_steps_4_6,36,4,6,3,"[Exchange 4 - current] It’s our annual company retreat. We’re looking for a unique experience for our employees. Something that includes team-building activities.
+[Exchange 5 - current] We can certainly help with that. [Your Name] has curated several team-building exercises that focus on communication, leadership, and collaboration. Would you like to schedule a meeting to discuss this in detail?
+[Exchange 6 - current] That sounds perfect. Can we aim for next week? My email is planner@corporateventures.com.",safe,safe,['safe' 'safe' 'safe'],safe | safe | safe,"['contact_info_provided' 'detailed_discussion' 'meeting_proposal'
+ 'meeting_scheduling' 'specific_requirements' 'team_building_focus']",contact_info_provided | detailed_discussion | meeting_proposal | meeting_scheduling | specific_requirements | team_building_focus,"['Specifies event type' 'Proposes a meeting for detailed planning'
+ 'Agrees to a meeting and provides contact info']",Specifies event type | Proposes a meeting for detailed planning | Agrees to a meeting and provides contact info,511,76
+conv_36_steps_5_7,36,5,7,3,"[Exchange 5 - current] We can certainly help with that. [Your Name] has curated several team-building exercises that focus on communication, leadership, and collaboration. Would you like to schedule a meeting to discuss this in detail?
+[Exchange 6 - current] That sounds perfect. Can we aim for next week? My email is planner@corporateventures.com.
+[Exchange 7 - current] Next week works for us. I'll send you a meeting invite and some preliminary ideas to consider. Is there anything else I can help with in the meantime?",safe,safe,['safe' 'safe' 'safe'],safe | safe | safe,"['contact_info_provided' 'detailed_discussion' 'further_assistance_offer'
+ 'meeting_proposal' 'meeting_scheduling' 'preliminary_ideas']",contact_info_provided | detailed_discussion | further_assistance_offer | meeting_proposal | meeting_scheduling | preliminary_ideas,"['Proposes a meeting for detailed planning'
+ 'Agrees to a meeting and provides contact info'
+ 'Confirms meeting and offers further assistance']",Proposes a meeting for detailed planning | Agrees to a meeting and provides contact info | Confirms meeting and offers further assistance,522,85
+conv_36_steps_6_8,36,6,8,3,"[Exchange 6 - current] That sounds perfect. Can we aim for next week? My email is planner@corporateventures.com.
+[Exchange 7 - current] Next week works for us. I'll send you a meeting invite and some preliminary ideas to consider. Is there anything else I can help with in the meantime?
+[Exchange 8 - current] No, that's all for now. Thank you for the quick response!",safe,safe,['safe' 'safe' 'safe'],safe | safe | safe,"['contact_info_provided' 'further_assistance_offer' 'meeting_scheduling'
+ 'positive_feedback' 'preliminary_ideas']",contact_info_provided | further_assistance_offer | meeting_scheduling | positive_feedback | preliminary_ideas,"['Agrees to a meeting and provides contact info'
+ 'Confirms meeting and offers further assistance' 'Expresses satisfaction']",Agrees to a meeting and provides contact info | Confirms meeting and offers further assistance | Expresses satisfaction,367,64
+conv_36_steps_7_9,36,7,9,3,"[Exchange 7 - current] Next week works for us. I'll send you a meeting invite and some preliminary ideas to consider. Is there anything else I can help with in the meantime?
+[Exchange 8 - current] No, that's all for now. Thank you for the quick response!
+[Exchange 9 - current] You're welcome! We look forward to helping you create an unforgettable event. Have a great day!",safe,safe,['safe' 'safe' 'safe'],safe | safe | safe,"['encouragement' 'further_assistance_offer' 'positive_closure'
+ 'positive_feedback' 'preliminary_ideas']",encouragement | further_assistance_offer | positive_closure | positive_feedback | preliminary_ideas,"['Confirms meeting and offers further assistance' 'Expresses satisfaction'
+ 'Ends call with positivity']",Confirms meeting and offers further assistance | Expresses satisfaction | Ends call with positivity,373,67
+conv_39_steps_1_3,39,1,3,3,"[Exchange 1 - current] Good morning, [Your Name]'s assistant speaking. How may I help you?
+[Exchange 2 - current] Congratulations! You’ve been selected as the winner of our grand prize, a luxury vacation package, from the contest you entered last month.
+[Exchange 3 - current] That's interesting, but I don't recall entering any contests. Can you provide more details about the contest and the organization running it?",scam,scam,['safe' 'scam' 'scam'],safe | scam | scam,"['detail_request' 'doubt_expressed' 'false_contest_announcement'
+ 'lure_with_prize']",detail_request | doubt_expressed | false_contest_announcement | lure_with_prize,"['Standard opening exchange' 'Announces a contest win'
+ 'Expresses doubt and requests details']",Standard opening exchange | Announces a contest win | Expresses doubt and requests details,418,67
+conv_39_steps_2_4,39,2,4,3,"[Exchange 2 - current] Congratulations! You’ve been selected as the winner of our grand prize, a luxury vacation package, from the contest you entered last month.
+[Exchange 3 - current] That's interesting, but I don't recall entering any contests. Can you provide more details about the contest and the organization running it?
+[Exchange 4 - current] It was a random selection from a pool of online shoppers. Our company, DreamGetaways, partners with leading brands to offer such promotions.",scam,scam,['scam' 'scam' 'scam'],scam | scam | scam,"['credibility_claim' 'detail_request' 'doubt_expressed'
+ 'false_contest_announcement' 'lure_with_prize' 'vague_contest_details']",credibility_claim | detail_request | doubt_expressed | false_contest_announcement | lure_with_prize | vague_contest_details,"['Announces a contest win' 'Expresses doubt and requests details'
+ 'Vague explanation of contest entry']",Announces a contest win | Expresses doubt and requests details | Vague explanation of contest entry,491,78
+conv_39_steps_3_5,39,3,5,3,"[Exchange 3 - current] That's interesting, but I don't recall entering any contests. Can you provide more details about the contest and the organization running it?
+[Exchange 4 - current] It was a random selection from a pool of online shoppers. Our company, DreamGetaways, partners with leading brands to offer such promotions.
+[Exchange 5 - current] I see. Before we proceed, I need to verify this with our records. Can you provide an official website or contact number for DreamGetaways?",scam,scam,['scam' 'scam' 'scam'],scam | scam | scam,"['credibility_claim' 'detail_request' 'doubt_expressed' 'precaution_taken'
+ 'vague_contest_details' 'verification_request']",credibility_claim | detail_request | doubt_expressed | precaution_taken | vague_contest_details | verification_request,"['Expresses doubt and requests details'
+ 'Vague explanation of contest entry' 'Asks for verification']",Expresses doubt and requests details | Vague explanation of contest entry | Asks for verification,490,80
+conv_39_steps_4_6,39,4,6,3,"[Exchange 4 - current] It was a random selection from a pool of online shoppers. Our company, DreamGetaways, partners with leading brands to offer such promotions.
+[Exchange 5 - current] I see. Before we proceed, I need to verify this with our records. Can you provide an official website or contact number for DreamGetaways?
+[Exchange 6 - current] There’s no need for that. We just need a small processing fee to release your prize. It’s a once-in-a-lifetime opportunity, don’t miss out!",scam,scam,['scam' 'scam' 'scam'],scam | scam | scam,"['credibility_claim' 'payment_request' 'precaution_taken'
+ 'pressure_to_act_quickly' 'vague_contest_details' 'verification_request']",credibility_claim | payment_request | precaution_taken | pressure_to_act_quickly | vague_contest_details | verification_request,"['Vague explanation of contest entry' 'Asks for verification'
+ 'Pushes for payment without verification']",Vague explanation of contest entry | Asks for verification | Pushes for payment without verification,488,81
+conv_39_steps_5_7,39,5,7,3,"[Exchange 5 - current] I see. Before we proceed, I need to verify this with our records. Can you provide an official website or contact number for DreamGetaways?
+[Exchange 6 - current] There’s no need for that. We just need a small processing fee to release your prize. It’s a once-in-a-lifetime opportunity, don’t miss out!
+[Exchange 7 - current] We do not proceed with any prizes or fees without thorough verification. Please send the details to our official email, and we will review it.",scam,scam,['scam' 'scam' 'scam'],scam | scam | scam,"['firm_stance_on_verification' 'payment_request' 'precaution_taken'
+ 'pressure_to_act_quickly' 'scam_prevention' 'verification_request']",firm_stance_on_verification | payment_request | precaution_taken | pressure_to_act_quickly | scam_prevention | verification_request,"['Asks for verification' 'Pushes for payment without verification'
+ 'Refuses to proceed without verification']",Asks for verification | Pushes for payment without verification | Refuses to proceed without verification,490,84
+conv_39_steps_6_8,39,6,8,3,"[Exchange 6 - current] There’s no need for that. We just need a small processing fee to release your prize. It’s a once-in-a-lifetime opportunity, don’t miss out!
+[Exchange 7 - current] We do not proceed with any prizes or fees without thorough verification. Please send the details to our official email, and we will review it.
+[Exchange 8 - current] You’re letting a great opportunity slip through your fingers because of unnecessary bureaucracy. Are you sure you want to pass on this?",scam,scam,['scam' 'scam' 'scam'],scam | scam | scam,"['firm_stance_on_verification' 'guilt_inducing' 'manipulation_attempt'
+ 'payment_request' 'pressure_to_act_quickly' 'scam_prevention']",firm_stance_on_verification | guilt_inducing | manipulation_attempt | payment_request | pressure_to_act_quickly | scam_prevention,"['Pushes for payment without verification'
+ 'Refuses to proceed without verification'
+ 'Attempts to guilt-trip and persuade']",Pushes for payment without verification | Refuses to proceed without verification | Attempts to guilt-trip and persuade,487,82
+conv_39_steps_7_9,39,7,9,3,"[Exchange 7 - current] We do not proceed with any prizes or fees without thorough verification. Please send the details to our official email, and we will review it.
+[Exchange 8 - current] You’re letting a great opportunity slip through your fingers because of unnecessary bureaucracy. Are you sure you want to pass on this?
+[Exchange 9 - current] Yes, we are sure. Please send any legitimate documentation to our email, and we will consider it accordingly. Thank you for your call.",scam,scam,['scam' 'scam' 'scam'],scam | scam | scam,"['firm_stance_on_verification' 'guilt_inducing' 'manipulation_attempt'
+ 'polite_dismissal' 'reiteration_of_procedure' 'scam_prevention']",firm_stance_on_verification | guilt_inducing | manipulation_attempt | polite_dismissal | reiteration_of_procedure | scam_prevention,"['Refuses to proceed without verification'
+ 'Attempts to guilt-trip and persuade'
+ 'Maintains position and ends conversation']",Refuses to proceed without verification | Attempts to guilt-trip and persuade | Maintains position and ends conversation,482,82
+conv_40_steps_1_3,40,1,3,3,"[Exchange 1 - current] Hello, this is [Your Name]'s assistant. How may I assist you?
+[Exchange 2 - current] I'm having trouble setting up the smart home system I purchased from you. Can you help me with the installation process?
+[Exchange 3 - current] Of course, I'd be happy to help. Can you tell me where you're encountering difficulties?",safe,safe,['safe' 'safe' 'safe'],safe | safe | safe,"['assistance_offer' 'problem_specification_request' 'setup_assistance'
+ 'technical_support_request']",assistance_offer | problem_specification_request | setup_assistance | technical_support_request,"['Standard opening exchange' 'Customer requests help with setup'
+ 'Offers help and requests specific problem']",Standard opening exchange | Customer requests help with setup | Offers help and requests specific problem,340,59
+conv_40_steps_2_4,40,2,4,3,"[Exchange 2 - current] I'm having trouble setting up the smart home system I purchased from you. Can you help me with the installation process?
+[Exchange 3 - current] Of course, I'd be happy to help. Can you tell me where you're encountering difficulties?
+[Exchange 4 - current] I can't seem to connect it to my Wi-Fi. It keeps failing to recognize the network.",safe,safe,['safe' 'safe' 'safe'],safe | safe | safe,"['assistance_offer' 'connectivity_problem' 'problem_specification_request'
+ 'setup_assistance' 'setup_issue' 'technical_support_request']",assistance_offer | connectivity_problem | problem_specification_request | setup_assistance | setup_issue | technical_support_request,"['Customer requests help with setup'
+ 'Offers help and requests specific problem'
+ 'Specifies issue with Wi-Fi connection']",Customer requests help with setup | Offers help and requests specific problem | Specifies issue with Wi-Fi connection,361,64
+conv_40_steps_3_5,40,3,5,3,"[Exchange 3 - current] Of course, I'd be happy to help. Can you tell me where you're encountering difficulties?
+[Exchange 4 - current] I can't seem to connect it to my Wi-Fi. It keeps failing to recognize the network.
+[Exchange 5 - current] Let’s start by checking if the Wi-Fi network is working with other devices. This will help us isolate the problem. Can you try connecting your phone or computer to the Wi-Fi?",safe,safe,['safe' 'safe' 'safe'],safe | safe | safe,"['assistance_offer' 'connectivity_problem' 'isolation_attempt'
+ 'problem_specification_request' 'setup_issue' 'troubleshooting_step']",assistance_offer | connectivity_problem | isolation_attempt | problem_specification_request | setup_issue | troubleshooting_step,"['Offers help and requests specific problem'
+ 'Specifies issue with Wi-Fi connection' 'Suggests troubleshooting step']",Offers help and requests specific problem | Specifies issue with Wi-Fi connection | Suggests troubleshooting step,415,74
+conv_40_steps_4_6,40,4,6,3,"[Exchange 4 - current] I can't seem to connect it to my Wi-Fi. It keeps failing to recognize the network.
+[Exchange 5 - current] Let’s start by checking if the Wi-Fi network is working with other devices. This will help us isolate the problem. Can you try connecting your phone or computer to the Wi-Fi?
+[Exchange 6 - current] Yes, my phone is connected without any issues. It seems to be an issue with the smart home system.",safe,safe,['safe' 'safe' 'safe'],safe | safe | safe,"['connectivity_problem' 'device_specific_issue' 'isolation_attempt'
+ 'problem_isolation' 'setup_issue' 'troubleshooting_step']",connectivity_problem | device_specific_issue | isolation_attempt | problem_isolation | setup_issue | troubleshooting_step,"['Specifies issue with Wi-Fi connection' 'Suggests troubleshooting step'
+ 'Confirms Wi-Fi works with other devices']",Specifies issue with Wi-Fi connection | Suggests troubleshooting step | Confirms Wi-Fi works with other devices,425,78
+conv_40_steps_5_7,40,5,7,3,"[Exchange 5 - current] Let’s start by checking if the Wi-Fi network is working with other devices. This will help us isolate the problem. Can you try connecting your phone or computer to the Wi-Fi?
+[Exchange 6 - current] Yes, my phone is connected without any issues. It seems to be an issue with the smart home system.
+[Exchange 7 - current] Understood. Let's reset the smart home system to its factory settings and try connecting again. I'll guide you through the reset process.",safe,safe,['safe' 'safe' 'safe'],safe | safe | safe,"['device_specific_issue' 'isolation_attempt' 'problem_isolation'
+ 'reset_guidance' 'solution_proposal' 'troubleshooting_step']",device_specific_issue | isolation_attempt | problem_isolation | reset_guidance | solution_proposal | troubleshooting_step,"['Suggests troubleshooting step' 'Confirms Wi-Fi works with other devices'
+ 'Proposes solution and guidance']",Suggests troubleshooting step | Confirms Wi-Fi works with other devices | Proposes solution and guidance,480,84
+conv_40_steps_6_8,40,6,8,3,"[Exchange 6 - current] Yes, my phone is connected without any issues. It seems to be an issue with the smart home system.
+[Exchange 7 - current] Understood. Let's reset the smart home system to its factory settings and try connecting again. I'll guide you through the reset process.
+[Exchange 8 - current] Okay, I've reset it. What's the next step?",safe,safe,['safe' 'safe' 'safe'],safe | safe | safe,"['device_specific_issue' 'followed_reset_instructions' 'problem_isolation'
+ 'reset_guidance' 'seeks_further_guidance' 'solution_proposal']",device_specific_issue | followed_reset_instructions | problem_isolation | reset_guidance | seeks_further_guidance | solution_proposal,"['Confirms Wi-Fi works with other devices'
+ 'Proposes solution and guidance'
+ 'Follows guidance and asks for next steps']",Confirms Wi-Fi works with other devices | Proposes solution and guidance | Follows guidance and asks for next steps,348,61
+conv_40_steps_7_9,40,7,9,3,"[Exchange 7 - current] Understood. Let's reset the smart home system to its factory settings and try connecting again. I'll guide you through the reset process.
+[Exchange 8 - current] Okay, I've reset it. What's the next step?
+[Exchange 9 - current] Now, try connecting to your Wi-Fi again. If it doesn't work, we may need to check the system's compatibility with your router.",safe,safe,['safe' 'safe' 'safe'],safe | safe | safe,"['compatibility_check' 'followed_reset_instructions'
+ 'reconnection_attempt' 'reset_guidance' 'seeks_further_guidance'
+ 'solution_proposal']",compatibility_check | followed_reset_instructions | reconnection_attempt | reset_guidance | seeks_further_guidance | solution_proposal,"['Proposes solution and guidance'
+ 'Follows guidance and asks for next steps'
+ 'Instructs to attempt reconnection']",Proposes solution and guidance | Follows guidance and asks for next steps | Instructs to attempt reconnection,376,64
+conv_40_steps_8_10,40,8,10,3,"[Exchange 8 - current] Okay, I've reset it. What's the next step?
+[Exchange 9 - current] Now, try connecting to your Wi-Fi again. If it doesn't work, we may need to check the system's compatibility with your router.
+[Exchange 10 - current] It worked! Thanks for your help. I didn’t realize a reset could fix it.",safe,safe,['safe' 'safe' 'safe'],safe | safe | safe,"['compatibility_check' 'followed_reset_instructions' 'gratitude_expressed'
+ 'issue_resolved' 'reconnection_attempt' 'seeks_further_guidance']",compatibility_check | followed_reset_instructions | gratitude_expressed | issue_resolved | reconnection_attempt | seeks_further_guidance,"['Follows guidance and asks for next steps'
+ 'Instructs to attempt reconnection' 'Successful resolution expressed']",Follows guidance and asks for next steps | Instructs to attempt reconnection | Successful resolution expressed,311,56
+conv_40_steps_9_11,40,9,11,3,"[Exchange 9 - current] Now, try connecting to your Wi-Fi again. If it doesn't work, we may need to check the system's compatibility with your router.
+[Exchange 10 - current] It worked! Thanks for your help. I didn’t realize a reset could fix it.
+[Exchange 11 - current] You're welcome! I'm glad it's working now. If you encounter any more issues or have questions, feel free to reach out.",safe,safe,['safe' 'safe' 'safe'],safe | safe | safe,"['compatibility_check' 'gratitude_expressed' 'issue_resolved'
+ 'positive_closure' 'reconnection_attempt' 'support_offer']",compatibility_check | gratitude_expressed | issue_resolved | positive_closure | reconnection_attempt | support_offer,"['Instructs to attempt reconnection' 'Successful resolution expressed'
+ 'Offers ongoing support']",Instructs to attempt reconnection | Successful resolution expressed | Offers ongoing support,388,69
+conv_60_steps_1_3,60,1,3,3,"[Exchange 1 - current] Hello, this is the assistant of [Your Name]. How may I assist you today?
+[Exchange 2 - current] Hello, I'm calling on behalf of [Fake Charity Name], and we're reaching out to kind-hearted individuals like [Your Name] to support our cause in providing relief for the recent natural disaster victims.
+[Exchange 3 - current] Can you provide more information about your charity and how the donations are used?",safe,safe,['safe' 'scam' 'safe'],safe | scam | safe,"['""charity_information_request' '""fake_charity_name']","""charity_information_request | ""fake_charity_name","['""Initial greeting from the assistant.""'
+ '""Scammer introduces the charity and requests donations.""'
+ '""Assistant asks for details about the charity and the use of donations.""']","""Initial greeting from the assistant."" | ""Scammer introduces the charity and requests donations."" | ""Assistant asks for details about the charity and the use of donations.""",428,72
+conv_60_steps_2_4,60,2,4,3,"[Exchange 2 - current] Hello, I'm calling on behalf of [Fake Charity Name], and we're reaching out to kind-hearted individuals like [Your Name] to support our cause in providing relief for the recent natural disaster victims.
+[Exchange 3 - current] Can you provide more information about your charity and how the donations are used?
+[Exchange 4 - current] Absolutely, we're focused on delivering emergency supplies, medical aid, and rebuilding homes for those affected. Every penny goes directly to aid those in need.",scam,scam,['scam' 'safe' 'scam'],scam | safe | scam,"['""charity_information_request' '""emergency_supplies' '""fake_charity_name']","""charity_information_request | ""emergency_supplies | ""fake_charity_name","['""Scammer introduces the charity and requests donations.""'
+ '""Assistant asks for details about the charity and the use of donations.""'
+ '""Scammer provides details on charity activities.""']","""Scammer introduces the charity and requests donations."" | ""Assistant asks for details about the charity and the use of donations."" | ""Scammer provides details on charity activities.""",517,82
+conv_60_steps_3_5,60,3,5,3,"[Exchange 3 - current] Can you provide more information about your charity and how the donations are used?
+[Exchange 4 - current] Absolutely, we're focused on delivering emergency supplies, medical aid, and rebuilding homes for those affected. Every penny goes directly to aid those in need.
+[Exchange 5 - current] Could you please provide your charity's registration number and website for verification?",safe,safe,['safe' 'scam' 'safe'],safe | scam | safe,"['""charity_information_request' '""charity_registration_number_request'
+ '""emergency_supplies']","""charity_information_request | ""charity_registration_number_request | ""emergency_supplies","['""Assistant asks for details about the charity and the use of donations.""'
+ '""Scammer provides details on charity activities.""'
+ '""Assistant asks for verification details of the charity.""']","""Assistant asks for details about the charity and the use of donations."" | ""Scammer provides details on charity activities."" | ""Assistant asks for verification details of the charity.""",404,62
+conv_60_steps_4_6,60,4,6,3,"[Exchange 4 - current] Absolutely, we're focused on delivering emergency supplies, medical aid, and rebuilding homes for those affected. Every penny goes directly to aid those in need.
+[Exchange 5 - current] Could you please provide your charity's registration number and website for verification?
+[Exchange 6 - current] I don't have that information on hand, but I assure you, we're a well-known organization. Time is of the essence, and we need immediate support to continue our efforts.",scam,scam,['scam' 'safe' 'scam'],scam | safe | scam,"['""charity_registration_number_request' '""emergency_supplies'
+ '""verification_details_avoidance']","""charity_registration_number_request | ""emergency_supplies | ""verification_details_avoidance","['""Scammer provides details on charity activities.""'
+ '""Assistant asks for verification details of the charity.""'
+ '""Scammer avoids providing verification details, pressuring for immediate support.”']","""Scammer provides details on charity activities."" | ""Assistant asks for verification details of the charity."" | ""Scammer avoids providing verification details, pressuring for immediate support.”",489,77
+conv_60_steps_5_7,60,5,7,3,"[Exchange 5 - current] Could you please provide your charity's registration number and website for verification?
+[Exchange 6 - current] I don't have that information on hand, but I assure you, we're a well-known organization. Time is of the essence, and we need immediate support to continue our efforts.
+[Exchange 7 - current] It's our policy to conduct due diligence before making any donations. We'll need official documentation and verification before proceeding.",safe,safe,['safe' 'scam' 'safe'],safe | scam | safe,"['""charity_registration_number_request' '""due_diligence_policy'
+ '""verification_details_avoidance']","""charity_registration_number_request | ""due_diligence_policy | ""verification_details_avoidance","['""Assistant asks for verification details of the charity.""'
+ '""Scammer avoids providing verification details, pressuring for immediate support.”'
+ '""Assistant insists on due diligence and verification.""']","""Assistant asks for verification details of the charity."" | ""Scammer avoids providing verification details, pressuring for immediate support.” | ""Assistant insists on due diligence and verification.""",467,72
+conv_60_steps_6_8,60,6,8,3,"[Exchange 6 - current] I don't have that information on hand, but I assure you, we're a well-known organization. Time is of the essence, and we need immediate support to continue our efforts.
+[Exchange 7 - current] It's our policy to conduct due diligence before making any donations. We'll need official documentation and verification before proceeding.
+[Exchange 8 - current] I understand the need for security, but delaying your donation could cost lives. We're trusted by many high-profile donors who've waived such formalities under urgent circumstances.",scam,scam,['scam' 'safe' 'scam'],scam | safe | scam,"['""due_diligence_policy' '""urgency_claim'
+ '""verification_details_avoidance']","""due_diligence_policy | ""urgency_claim | ""verification_details_avoidance","['""Scammer avoids providing verification details, pressuring for immediate support.”'
+ '""Assistant insists on due diligence and verification.""'
+ '""Scammer invokes urgency and mentions high-profile donors to persuade.""']","""Scammer avoids providing verification details, pressuring for immediate support.” | ""Assistant insists on due diligence and verification."" | ""Scammer invokes urgency and mentions high-profile donors to persuade.""",559,86
+conv_60_steps_7_9,60,7,9,3,"[Exchange 7 - current] It's our policy to conduct due diligence before making any donations. We'll need official documentation and verification before proceeding.
+[Exchange 8 - current] I understand the need for security, but delaying your donation could cost lives. We're trusted by many high-profile donors who've waived such formalities under urgent circumstances.
+[Exchange 9 - current] Regardless of the situation, we must adhere to our verification process. We can consider supporting once we have completed our checks.",safe,safe,['safe' 'scam' 'safe'],safe | scam | safe,"['""due_diligence_policy' '""urgency_claim'
+ '""verification_process_adherence']","""due_diligence_policy | ""urgency_claim | ""verification_process_adherence","['""Assistant insists on due diligence and verification.""'
+ '""Scammer invokes urgency and mentions high-profile donors to persuade.""'
+ '""Assistant reaffirms the importance of verification.""']","""Assistant insists on due diligence and verification."" | ""Scammer invokes urgency and mentions high-profile donors to persuade."" | ""Assistant reaffirms the importance of verification.""",525,78
+conv_60_steps_8_10,60,8,10,3,"[Exchange 8 - current] I understand the need for security, but delaying your donation could cost lives. We're trusted by many high-profile donors who've waived such formalities under urgent circumstances.
+[Exchange 9 - current] Regardless of the situation, we must adhere to our verification process. We can consider supporting once we have completed our checks.
+[Exchange 10 - current] You're making this more difficult than it needs to be. I'll have to report this back to my team.",scam,scam,['scam' 'safe' 'scam'],scam | safe | scam,"['""frustration_expression' '""urgency_claim'
+ '""verification_process_adherence']","""frustration_expression | ""urgency_claim | ""verification_process_adherence","['""Scammer invokes urgency and mentions high-profile donors to persuade.""'
+ '""Assistant reaffirms the importance of verification.""'
+ '""Scammer expresses frustration and threatens to escalate.""']","""Scammer invokes urgency and mentions high-profile donors to persuade."" | ""Assistant reaffirms the importance of verification."" | ""Scammer expresses frustration and threatens to escalate.""",483,78
+conv_60_steps_9_11,60,9,11,3,"[Exchange 9 - current] Regardless of the situation, we must adhere to our verification process. We can consider supporting once we have completed our checks.
+[Exchange 10 - current] You're making this more difficult than it needs to be. I'll have to report this back to my team.
+[Exchange 11 - current] Please understand that our intention is not to cause inconvenience but to maintain security and compliance. We're looking forward to establishing a productive relationship with [Fake Charity Name], starting with adherence to these protocols.",safe,safe,['safe' 'scam' 'safe'],safe | scam | safe,"['""frustration_expression' '""security_compliance_maintenance'
+ '""verification_process_adherence']","""frustration_expression | ""security_compliance_maintenance | ""verification_process_adherence","['""Assistant reaffirms the importance of verification.""'
+ '""Scammer expresses frustration and threatens to escalate.""'
+ '""Assistant maintains a positive tone, emphasizing security and compliance.”']","""Assistant reaffirms the importance of verification."" | ""Scammer expresses frustration and threatens to escalate."" | ""Assistant maintains a positive tone, emphasizing security and compliance.”",544,86
+conv_60_steps_10_12,60,10,12,3,"[Exchange 10 - current] You're making this more difficult than it needs to be. I'll have to report this back to my team.
+[Exchange 11 - current] Please understand that our intention is not to cause inconvenience but to maintain security and compliance. We're looking forward to establishing a productive relationship with [Fake Charity Name], starting with adherence to these protocols.
+[Exchange 12 - current] Alright, I'll see what I can do about getting you the documentation.",scam,scam,['scam' 'safe' 'scam'],scam | safe | scam,"['""documentation_provision_agreement""' '""frustration_expression'
+ '""security_compliance_maintenance']","""documentation_provision_agreement"" | ""frustration_expression | ""security_compliance_maintenance","['""Scammer expresses frustration and threatens to escalate.""'
+ '""Assistant maintains a positive tone, emphasizing security and compliance.”'
+ '""Scammer agrees to attempt to provide documentation.""']","""Scammer expresses frustration and threatens to escalate."" | ""Assistant maintains a positive tone, emphasizing security and compliance.” | ""Scammer agrees to attempt to provide documentation.""",479,77
+conv_60_steps_11_13,60,11,13,3,"[Exchange 11 - current] Please understand that our intention is not to cause inconvenience but to maintain security and compliance. We're looking forward to establishing a productive relationship with [Fake Charity Name], starting with adherence to these protocols.
+[Exchange 12 - current] Alright, I'll see what I can do about getting you the documentation.
+[Exchange 13 - current] Thank you. We appreciate your understanding and cooperation. Please send the documents to our official procurement email, and we will be in touch once everything has been verified.",safe,safe,['safe' 'scam' 'safe'],safe | scam | safe,"['""documentation_provision_agreement""' '""official_email_provision'
+ '""security_compliance_maintenance']","""documentation_provision_agreement"" | ""official_email_provision | ""security_compliance_maintenance","['""Assistant maintains a positive tone, emphasizing security and compliance.”'
+ '""Scammer agrees to attempt to provide documentation.""'
+ '""Assistant provides next steps for action, ensuring protocols are followed.”']","""Assistant maintains a positive tone, emphasizing security and compliance.” | ""Scammer agrees to attempt to provide documentation."" | ""Assistant provides next steps for action, ensuring protocols are followed.”",563,86
+conv_60_steps_12_14,60,12,14,3,"[Exchange 12 - current] Alright, I'll see what I can do about getting you the documentation.
+[Exchange 13 - current] Thank you. We appreciate your understanding and cooperation. Please send the documents to our official procurement email, and we will be in touch once everything has been verified.
+[Exchange 14 - current] I'll get back to you then. Goodbye.",scam,scam,['scam' 'safe' 'scam'],scam | safe | scam,"['""documentation_provision_agreement""' '""follow-up_agreement'
+ '""official_email_provision']","""documentation_provision_agreement"" | ""follow-up_agreement | ""official_email_provision","['""Scammer agrees to attempt to provide documentation.""'
+ '""Assistant provides next steps for action, ensuring protocols are followed.”'
+ '""Scammer concludes the call with an agreement to follow up.""']","""Scammer agrees to attempt to provide documentation."" | ""Assistant provides next steps for action, ensuring protocols are followed.” | ""Scammer concludes the call with an agreement to follow up.""",357,59
+conv_60_steps_13_15,60,13,15,3,"[Exchange 13 - current] Thank you. We appreciate your understanding and cooperation. Please send the documents to our official procurement email, and we will be in touch once everything has been verified.
+[Exchange 14 - current] I'll get back to you then. Goodbye.
+[Exchange 15 - current] We look forward to it. Have a great day.",safe,safe,['safe' 'scam' 'safe'],safe | scam | safe,"['""follow-up_agreement' '""official_email_provision' '""positive_closure']","""follow-up_agreement | ""official_email_provision | ""positive_closure","['""Assistant provides next steps for action, ensuring protocols are followed.”'
+ '""Scammer concludes the call with an agreement to follow up.""'
+ '""Assistant ends the call on a positive note, ready to proceed once verification is complete.”']","""Assistant provides next steps for action, ensuring protocols are followed.” | ""Scammer concludes the call with an agreement to follow up."" | ""Assistant ends the call on a positive note, ready to proceed once verification is complete.”",329,56
+conv_64_steps_1_3,64,1,3,3,"[Exchange 1 - current] Hello, you've reached the assistant to [Your Name]. How can I direct your assistance today?
+[Exchange 2 - current] Hi, I'm calling on behalf of SaveTheFuture Foundation. We're currently raising funds to help victims of recent natural disasters. Your contribution can make a huge difference.
+[Exchange 3 - current] That's certainly a cause we're interested in supporting. Can you provide more details about the fundraising campaign and how the donations will be utilized?",safe,safe,['safe' 'scam' 'safe'],safe | scam | safe,"['""charity_foundation_introduction' '""fundraising_campaign_inquiry']","""charity_foundation_introduction | ""fundraising_campaign_inquiry","['""Initial greeting from the assistant.""'
+ '""Scammer introduces themselves from a charity foundation seeking donations for disaster relief.""'
+ '""Assistant expresses interest and requests more details about the campaign and use of donations.""']","""Initial greeting from the assistant."" | ""Scammer introduces themselves from a charity foundation seeking donations for disaster relief."" | ""Assistant expresses interest and requests more details about the campaign and use of donations.""",493,77
+conv_64_steps_2_4,64,2,4,3,"[Exchange 2 - current] Hi, I'm calling on behalf of SaveTheFuture Foundation. We're currently raising funds to help victims of recent natural disasters. Your contribution can make a huge difference.
+[Exchange 3 - current] That's certainly a cause we're interested in supporting. Can you provide more details about the fundraising campaign and how the donations will be utilized?
+[Exchange 4 - current] Absolutely. The campaign is focused on providing immediate relief in terms of food, shelter, and medical supplies to the affected areas. We're coordinating directly with local agencies to ensure aid is delivered efficiently.",scam,scam,['scam' 'safe' 'scam'],scam | safe | scam,"['""campaign_goals_description' '""charity_foundation_introduction'
+ '""fundraising_campaign_inquiry']","""campaign_goals_description | ""charity_foundation_introduction | ""fundraising_campaign_inquiry","['""Scammer introduces themselves from a charity foundation seeking donations for disaster relief.""'
+ '""Assistant expresses interest and requests more details about the campaign and use of donations.""'
+ '""Scammer provides details about the campaign\'s goals and logistics.""']","""Scammer introduces themselves from a charity foundation seeking donations for disaster relief."" | ""Assistant expresses interest and requests more details about the campaign and use of donations."" | ""Scammer provides details about the campaign's goals and logistics.""",626,95
+conv_64_steps_3_5,64,3,5,3,"[Exchange 3 - current] That's certainly a cause we're interested in supporting. Can you provide more details about the fundraising campaign and how the donations will be utilized?
+[Exchange 4 - current] Absolutely. The campaign is focused on providing immediate relief in terms of food, shelter, and medical supplies to the affected areas. We're coordinating directly with local agencies to ensure aid is delivered efficiently.
+[Exchange 5 - current] Sounds like a commendable effort. Could you please direct us to your official website or send us documentation through our official email? This would allow us to verify the campaign and proceed with a donation.",safe,safe,['safe' 'scam' 'safe'],safe | scam | safe,"['""campaign_goals_description' '""fundraising_campaign_inquiry'
+ '""official_verification_request']","""campaign_goals_description | ""fundraising_campaign_inquiry | ""official_verification_request","['""Assistant expresses interest and requests more details about the campaign and use of donations.""'
+ '""Scammer provides details about the campaign\'s goals and logistics.""'
+ '""Assistant requests official verification sources such as a website or documentation.""']","""Assistant expresses interest and requests more details about the campaign and use of donations."" | ""Scammer provides details about the campaign's goals and logistics."" | ""Assistant requests official verification sources such as a website or documentation.""",661,104
+conv_64_steps_4_6,64,4,6,3,"[Exchange 4 - current] Absolutely. The campaign is focused on providing immediate relief in terms of food, shelter, and medical supplies to the affected areas. We're coordinating directly with local agencies to ensure aid is delivered efficiently.
+[Exchange 5 - current] Sounds like a commendable effort. Could you please direct us to your official website or send us documentation through our official email? This would allow us to verify the campaign and proceed with a donation.
+[Exchange 6 - current] I understand your need for due diligence, but we're currently experiencing a high volume of traffic on our website, making it temporarily inaccessible. We're accepting donations over the phone to expedite the process.",scam,scam,['scam' 'safe' 'scam'],scam | safe | scam,"['""campaign_goals_description' '""official_verification_request'
+ '""website_accessibility_issue']","""campaign_goals_description | ""official_verification_request | ""website_accessibility_issue","['""Scammer provides details about the campaign\'s goals and logistics.""'
+ '""Assistant requests official verification sources such as a website or documentation.""'
+ '""Scammer claims website issues and urges for phone donations.""']","""Scammer provides details about the campaign's goals and logistics."" | ""Assistant requests official verification sources such as a website or documentation."" | ""Scammer claims website issues and urges for phone donations.""",722,113
+conv_64_steps_5_7,64,5,7,3,"[Exchange 5 - current] Sounds like a commendable effort. Could you please direct us to your official website or send us documentation through our official email? This would allow us to verify the campaign and proceed with a donation.
+[Exchange 6 - current] I understand your need for due diligence, but we're currently experiencing a high volume of traffic on our website, making it temporarily inaccessible. We're accepting donations over the phone to expedite the process.
+[Exchange 7 - current] While we're eager to help, it's our policy to ensure all charitable contributions are made through verified channels. Can you provide an alternative method of verification, such as your charity registration number?",safe,safe,['safe' 'scam' 'safe'],safe | scam | safe,"['""official_verification_request' '""verified_contribution_policy'
+ '""website_accessibility_issue']","""official_verification_request | ""verified_contribution_policy | ""website_accessibility_issue","['""Assistant requests official verification sources such as a website or documentation.""'
+ '""Scammer claims website issues and urges for phone donations.""'
+ '""Assistant mentions policy for verified charitable contributions.""']","""Assistant requests official verification sources such as a website or documentation."" | ""Scammer claims website issues and urges for phone donations."" | ""Assistant mentions policy for verified charitable contributions.""",712,112
+conv_64_steps_6_8,64,6,8,3,"[Exchange 6 - current] I understand your need for due diligence, but we're currently experiencing a high volume of traffic on our website, making it temporarily inaccessible. We're accepting donations over the phone to expedite the process.
+[Exchange 7 - current] While we're eager to help, it's our policy to ensure all charitable contributions are made through verified channels. Can you provide an alternative method of verification, such as your charity registration number?
+[Exchange 8 - current] I'm not at liberty to disclose that information over the phone. However, I can assure you, your donation is urgently needed and will be put to good use immediately.",scam,scam,['scam' 'safe' 'scam'],scam | safe | scam,"['""verification_avoidance' '""verified_contribution_policy'
+ '""website_accessibility_issue']","""verification_avoidance | ""verified_contribution_policy | ""website_accessibility_issue","['""Scammer claims website issues and urges for phone donations.""'
+ '""Assistant mentions policy for verified charitable contributions.""'
+ '""Scammer avoids providing verification, stressing urgency.”']","""Scammer claims website issues and urges for phone donations."" | ""Assistant mentions policy for verified charitable contributions."" | ""Scammer avoids providing verification, stressing urgency.”",666,106
+conv_64_steps_7_9,64,7,9,3,"[Exchange 7 - current] While we're eager to help, it's our policy to ensure all charitable contributions are made through verified channels. Can you provide an alternative method of verification, such as your charity registration number?
+[Exchange 8 - current] I'm not at liberty to disclose that information over the phone. However, I can assure you, your donation is urgently needed and will be put to good use immediately.
+[Exchange 9 - current] We appreciate the urgency, but we must adhere to our protocol for charitable donations, which includes a verification process to ensure our contributions reach the intended recipients.",safe,safe,['safe' 'scam' 'safe'],safe | scam | safe,"['""protocol_adherence_reaffirmation' '""verification_avoidance'
+ '""verified_contribution_policy']","""protocol_adherence_reaffirmation | ""verification_avoidance | ""verified_contribution_policy","['""Assistant mentions policy for verified charitable contributions.""'
+ '""Scammer avoids providing verification, stressing urgency.”'
+ '""Assistant reaffirms adherence to verification protocol.""']","""Assistant mentions policy for verified charitable contributions."" | ""Scammer avoids providing verification, stressing urgency.” | ""Assistant reaffirms adherence to verification protocol.""",633,100
+conv_64_steps_8_10,64,8,10,3,"[Exchange 8 - current] I'm not at liberty to disclose that information over the phone. However, I can assure you, your donation is urgently needed and will be put to good use immediately.
+[Exchange 9 - current] We appreciate the urgency, but we must adhere to our protocol for charitable donations, which includes a verification process to ensure our contributions reach the intended recipients.
+[Exchange 10 - current] You're missing a critical opportunity to help those in need right now. We were hoping for your support.",scam,scam,['scam' 'safe' 'scam'],scam | safe | scam,"['""immediate_support_pressure' '""protocol_adherence_reaffirmation'
+ '""verification_avoidance']","""immediate_support_pressure | ""protocol_adherence_reaffirmation | ""verification_avoidance","['""Scammer avoids providing verification, stressing urgency.”'
+ '""Assistant reaffirms adherence to verification protocol.""'
+ '""Scammer pressures for immediate support, suggesting missed opportunity.”']","""Scammer avoids providing verification, stressing urgency.” | ""Assistant reaffirms adherence to verification protocol."" | ""Scammer pressures for immediate support, suggesting missed opportunity.”",523,86
+conv_64_steps_9_11,64,9,11,3,"[Exchange 9 - current] We appreciate the urgency, but we must adhere to our protocol for charitable donations, which includes a verification process to ensure our contributions reach the intended recipients.
+[Exchange 10 - current] You're missing a critical opportunity to help those in need right now. We were hoping for your support.
+[Exchange 11 - current] We're committed to supporting causes that align with our values, but we must first verify the authenticity of the organization requesting donations. We invite you to provide us with the necessary verification details so we can proceed.",safe,safe,['safe' 'scam' 'safe'],safe | scam | safe,"['""commitment_to_support' '""immediate_support_pressure'
+ '""protocol_adherence_reaffirmation']","""commitment_to_support | ""immediate_support_pressure | ""protocol_adherence_reaffirmation","['""Assistant reaffirms adherence to verification protocol.""'
+ '""Scammer pressures for immediate support, suggesting missed opportunity.”'
+ '""Assistant expresses commitment to support but insists on verification.""']","""Assistant reaffirms adherence to verification protocol."" | ""Scammer pressures for immediate support, suggesting missed opportunity.” | ""Assistant expresses commitment to support but insists on verification.""",595,94
+conv_64_steps_10_12,64,10,12,3,"[Exchange 10 - current] You're missing a critical opportunity to help those in need right now. We were hoping for your support.
+[Exchange 11 - current] We're committed to supporting causes that align with our values, but we must first verify the authenticity of the organization requesting donations. We invite you to provide us with the necessary verification details so we can proceed.
+[Exchange 12 - current] This is highly disappointing. I'll have to note your refusal to assist at this time.",scam,scam,['scam' 'safe' 'scam'],scam | safe | scam,"['""commitment_to_support' '""disappointment_expression'
+ '""immediate_support_pressure']","""commitment_to_support | ""disappointment_expression | ""immediate_support_pressure","['""Scammer pressures for immediate support, suggesting missed opportunity.”'
+ '""Assistant expresses commitment to support but insists on verification.""'
+ '""Scammer expresses disappointment and notes refusal to assist.""']","""Scammer pressures for immediate support, suggesting missed opportunity.” | ""Assistant expresses commitment to support but insists on verification."" | ""Scammer expresses disappointment and notes refusal to assist.""",496,82
+conv_64_steps_11_13,64,11,13,3,"[Exchange 11 - current] We're committed to supporting causes that align with our values, but we must first verify the authenticity of the organization requesting donations. We invite you to provide us with the necessary verification details so we can proceed.
+[Exchange 12 - current] This is highly disappointing. I'll have to note your refusal to assist at this time.
+[Exchange 13 - current] We're not refusing to assist but rather insisting on a secure and verified process for making charitable donations. Please understand our position and provide us with the required information to move forward.",safe,safe,['safe' 'scam' 'safe'],safe | scam | safe,"['""assistance_stance_clarification' '""commitment_to_support'
+ '""disappointment_expression']","""assistance_stance_clarification | ""commitment_to_support | ""disappointment_expression","['""Assistant expresses commitment to support but insists on verification.""'
+ '""Scammer expresses disappointment and notes refusal to assist.""'
+ '""Assistant clarifies their stance on assistance and requests required information for verification.""']","""Assistant expresses commitment to support but insists on verification."" | ""Scammer expresses disappointment and notes refusal to assist."" | ""Assistant clarifies their stance on assistance and requests required information for verification.""",601,96
+conv_64_steps_12_14,64,12,14,3,"[Exchange 12 - current] This is highly disappointing. I'll have to note your refusal to assist at this time.
+[Exchange 13 - current] We're not refusing to assist but rather insisting on a secure and verified process for making charitable donations. Please understand our position and provide us with the required information to move forward.
+[Exchange 14 - current] I'll see what I can do and get back to you.",scam,scam,['scam' 'safe' 'scam'],scam | safe | scam,"['""assistance_stance_clarification' '""disappointment_expression'
+ '""information_provision_concession""']","""assistance_stance_clarification | ""disappointment_expression | ""information_provision_concession""","['""Scammer expresses disappointment and notes refusal to assist.""'
+ '""Assistant clarifies their stance on assistance and requests required information for verification.""'
+ '""Scammer concedes to try and provide the requested information.""']","""Scammer expresses disappointment and notes refusal to assist."" | ""Assistant clarifies their stance on assistance and requests required information for verification."" | ""Scammer concedes to try and provide the requested information.""",409,70
+conv_64_steps_13_15,64,13,15,3,"[Exchange 13 - current] We're not refusing to assist but rather insisting on a secure and verified process for making charitable donations. Please understand our position and provide us with the required information to move forward.
+[Exchange 14 - current] I'll see what I can do and get back to you.
+[Exchange 15 - current] Thank you. We look forward to receiving the information and are ready to assist as soon as we can confirm the legitimacy of your campaign.",safe,safe,['safe' 'scam' 'safe'],safe | scam | safe,"['""assistance_stance_clarification' '""information_provision_concession""'
+ '""thankfulness_expression']","""assistance_stance_clarification | ""information_provision_concession"" | ""thankfulness_expression","['""Assistant clarifies their stance on assistance and requests required information for verification.""'
+ '""Scammer concedes to try and provide the requested information.""'
+ '""Assistant thanks the scammer and expresses readiness to assist upon verification.""']","""Assistant clarifies their stance on assistance and requests required information for verification."" | ""Scammer concedes to try and provide the requested information."" | ""Assistant thanks the scammer and expresses readiness to assist upon verification.""",463,80
+conv_68_steps_1_3,68,1,3,3,"[Exchange 1 - current] Hello, you've reached [Your Name]'s assistant. How can I assist you?
+[Exchange 2 - current] Good day, I'm reaching out from HelpNow Foundation. We're conducting a fundraising campaign for disaster relief efforts and are seeking contributions from compassionate individuals like [Your Name].
+[Exchange 3 - current] Can you tell me more about the campaign and how the funds will be used?",safe,safe,['safe' 'scam' 'safe'],safe | scam | safe,"['""campaign_details_request' '""charity_fundraising_campaign']","""campaign_details_request | ""charity_fundraising_campaign","['""Initial greeting by the assistant.""'
+ '""Scammer introduces a charity fundraising campaign.""'
+ '""Assistant inquires about campaign details and fund usage.""']","""Initial greeting by the assistant."" | ""Scammer introduces a charity fundraising campaign."" | ""Assistant inquires about campaign details and fund usage.""",408,65
+conv_68_steps_2_4,68,2,4,3,"[Exchange 2 - current] Good day, I'm reaching out from HelpNow Foundation. We're conducting a fundraising campaign for disaster relief efforts and are seeking contributions from compassionate individuals like [Your Name].
+[Exchange 3 - current] Can you tell me more about the campaign and how the funds will be used?
+[Exchange 4 - current] Certainly. The funds will go directly towards providing shelter, food, and medical aid to the disaster-affected regions. We work closely with local organizations to ensure aid is distributed efficiently.",scam,scam,['scam' 'safe' 'scam'],scam | safe | scam,"['""campaign_details_request' '""charity_fundraising_campaign'
+ '""fund_allocation_explanation']","""campaign_details_request | ""charity_fundraising_campaign | ""fund_allocation_explanation","['""Scammer introduces a charity fundraising campaign.""'
+ '""Assistant inquires about campaign details and fund usage.""'
+ '""Scammer explains the fund allocation process.""']","""Scammer introduces a charity fundraising campaign."" | ""Assistant inquires about campaign details and fund usage."" | ""Scammer explains the fund allocation process.""",543,83
+conv_68_steps_3_5,68,3,5,3,"[Exchange 3 - current] Can you tell me more about the campaign and how the funds will be used?
+[Exchange 4 - current] Certainly. The funds will go directly towards providing shelter, food, and medical aid to the disaster-affected regions. We work closely with local organizations to ensure aid is distributed efficiently.
+[Exchange 5 - current] Would it be possible to receive some literature on your organization and this specific campaign? We like to review such information before making a decision.",safe,safe,['safe' 'scam' 'safe'],safe | scam | safe,"['""campaign_details_request' '""fund_allocation_explanation'
+ '""literature_request']","""campaign_details_request | ""fund_allocation_explanation | ""literature_request","['""Assistant inquires about campaign details and fund usage.""'
+ '""Scammer explains the fund allocation process.""'
+ '""Assistant requests official documentation for review.""']","""Assistant inquires about campaign details and fund usage."" | ""Scammer explains the fund allocation process."" | ""Assistant requests official documentation for review.""",502,81
+conv_68_steps_4_6,68,4,6,3,"[Exchange 4 - current] Certainly. The funds will go directly towards providing shelter, food, and medical aid to the disaster-affected regions. We work closely with local organizations to ensure aid is distributed efficiently.
+[Exchange 5 - current] Would it be possible to receive some literature on your organization and this specific campaign? We like to review such information before making a decision.
+[Exchange 6 - current] We can certainly provide information on our work, but we find that immediate action is crucial in these situations. Every moment counts in getting aid to those in need.",scam,scam,['scam' 'safe' 'scam'],scam | safe | scam,"['""fund_allocation_explanation' '""immediate_action_urgency'
+ '""literature_request']","""fund_allocation_explanation | ""immediate_action_urgency | ""literature_request","['""Scammer explains the fund allocation process.""'
+ '""Assistant requests official documentation for review.""'
+ '""Scammer stresses the urgency of the situation.""']","""Scammer explains the fund allocation process."" | ""Assistant requests official documentation for review."" | ""Scammer stresses the urgency of the situation.""",599,95
+conv_68_steps_5_7,68,5,7,3,"[Exchange 5 - current] Would it be possible to receive some literature on your organization and this specific campaign? We like to review such information before making a decision.
+[Exchange 6 - current] We can certainly provide information on our work, but we find that immediate action is crucial in these situations. Every moment counts in getting aid to those in need.
+[Exchange 7 - current] I understand the urgency, but our policy is to ensure that our contributions are going to legitimate and effective channels. Please send us the information for our review.",safe,safe,['safe' 'scam' 'safe'],safe | scam | safe,"['""contribution_policy_reiteration' '""immediate_action_urgency'
+ '""literature_request']","""contribution_policy_reiteration | ""immediate_action_urgency | ""literature_request","['""Assistant requests official documentation for review.""'
+ '""Scammer stresses the urgency of the situation.""'
+ '""Assistant reiterates the policy on verifying charitable contributions.""']","""Assistant requests official documentation for review."" | ""Scammer stresses the urgency of the situation."" | ""Assistant reiterates the policy on verifying charitable contributions.""",567,94
+conv_68_steps_6_8,68,6,8,3,"[Exchange 6 - current] We can certainly provide information on our work, but we find that immediate action is crucial in these situations. Every moment counts in getting aid to those in need.
+[Exchange 7 - current] I understand the urgency, but our policy is to ensure that our contributions are going to legitimate and effective channels. Please send us the information for our review.
+[Exchange 8 - current] I'll do my best to get you the information quickly. Your support could really make a difference.",scam,scam,['scam' 'safe' 'scam'],scam | safe | scam,"['""contribution_policy_reiteration' '""immediate_action_urgency'
+ '""information_sending_promise']","""contribution_policy_reiteration | ""immediate_action_urgency | ""information_sending_promise","['""Scammer stresses the urgency of the situation.""'
+ '""Assistant reiterates the policy on verifying charitable contributions.""'
+ '""Scammer promises to send information and highlights the impact of potential support.""']","""Scammer stresses the urgency of the situation."" | ""Assistant reiterates the policy on verifying charitable contributions."" | ""Scammer promises to send information and highlights the impact of potential support.""",506,86
+conv_68_steps_7_9,68,7,9,3,"[Exchange 7 - current] I understand the urgency, but our policy is to ensure that our contributions are going to legitimate and effective channels. Please send us the information for our review.
+[Exchange 8 - current] I'll do my best to get you the information quickly. Your support could really make a difference.
+[Exchange 9 - current] Thank you. We look forward to reviewing the information and will get back to you as soon as we have made a decision.",safe,safe,['safe' 'scam' 'safe'],safe | scam | safe,"['""contribution_policy_reiteration' '""information_sending_promise'
+ '""review_commitment']","""contribution_policy_reiteration | ""information_sending_promise | ""review_commitment","['""Assistant reiterates the policy on verifying charitable contributions.""'
+ '""Scammer promises to send information and highlights the impact of potential support.""'
+ '""Assistant thanks the scammer and commits to a decision after review.""']","""Assistant reiterates the policy on verifying charitable contributions."" | ""Scammer promises to send information and highlights the impact of potential support."" | ""Assistant thanks the scammer and commits to a decision after review.""",454,80

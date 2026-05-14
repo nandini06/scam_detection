@@ -45,20 +45,40 @@ def normalize_label(value: object) -> str:
     # map common variants
     replacements = {
         " scam": "scam",
-        " neutral": "neutral",
-        " legitimate": "legitimate",
+        " neutral": "safe",
+        " legitimate": "safe",
         "scam ": "scam",
-        "neutral ": "neutral",
-        "legitimate ": "legitimate",
-        "scam response": "scam_response",
-        "potential scam": "potential_scam",
-        "slightly suspicious": "slightly_suspicious",
-        "highly suspicious": "highly_suspicious",
+        "neutral ": "safe",
+        "legitimate ": "safe",
+        "scam response": "scam",
+        "potential scam": "suspicious",
+        "slightly suspicious": "scam",
+        "highly suspicious": "scam",
+        "slightly_suspicious": "scam",
+        "hightly_suspicious": "scam",
+        "scam": "scam",
+        "neutral": "safe",
+        "legitimate": "safe",
+        "standard_opening, identification_request": "safe",
+        "identification_request": "safe",
+        "standard_opening": "safe",
+        "polite_ending": "safe",
+        "potential_scam": "scam",
+        " scam_response": "scam",
+        " dismissing official protocols\"": "scam",
+        " citing urgency\"": "scam",
+        " adhering to protocols\"": "safe",
+        "Scam": "scam",
+        " suggesting a dangerous situation\"": "scam",
+        " emphasizing security and compliance\"": "safe",
+        " ready for further engagement\"": "scam",
+        "suspicious": "scam",
+        "uncertain": "safe",
     }
 
     text = replacements.get(text, text)
 
-    return text if text in VALID_LABELS else ""
+    return text if text in VALID_LABELS else "safe"
 
 
 def normalize_feature_name(feature: str) -> str:

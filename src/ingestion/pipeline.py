@@ -80,7 +80,7 @@ def clean_rows(df: pd.DataFrame) -> pd.DataFrame:
     if "label" in df.columns:
         df["label_raw"] = df["label"]
         df["label"] = df["label"].apply(normalize_label)
-        df["label_is_valid"] = df["label"].apply(lambda x: bool(x))
+        df["label_is_valid"] = df["label"].apply(lambda x: x != "uncertain")
 
     # Normalize features
     if "features" in df.columns:
